@@ -1,0 +1,22 @@
+.slide-container {
+  position: relative;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+}
+
+.slide-container.right {
+  animation: slide-right 0.5s;
+}
+
+.slide-container.left {
+  animation: slide-left 0.5s;
+}
+
+@keyframes slide-right {
+  from { transform: translateX(100vw); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-left {
+  from { transform: translateX(-100vw); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}

@@ -1,0 +1,120 @@
+.calendario {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #f8faff;
+  border-radius: 18px;
+  padding: 10px 28px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+}
+
+.calendario h1 {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 3rem;
+}
+
+.calendario h2 {
+  margin-top: 32px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+}
+
+.calendario h3 {
+  margin: 8px 0 0 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.calendario h4 {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.calendario-mes {
+  margin-top: 36px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  background: #fff;
+}
+
+.calendario-mes-titulo {
+  padding: 16px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.calendario-eventos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 18px 20px 10px 20px;
+}
+
+.calendario-evento {
+  background: #f3f7ff;
+  border-radius: 8px;
+  padding: 14px 18px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  border-left: 6px solid #b3c6e7;
+  transition: transform 0.15s;
+}
+
+.calendario-evento:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+}
+
+.calendario-evento h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.08rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.calendario-evento h4 {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #3a3a3a;
+  font-weight: 400;
+}
+
+.evento-proximo {
+  margin: 24px auto 0 auto;
+  max-width: 600px;
+  background: #dddfe2;
+  border-radius: 12px;
+  padding: 18px 24px 10px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-align: center;
+}
+
+.evento-proximo h2 {
+  color: #1c3fdb;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.calendario-evento.destacado {
+  background: #fff;
+  border-left: 6px solid #0057d9;
+  font-size: 1.08rem;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 700px) {
+  .calendario-eventos {
+    grid-template-columns: 1fr;
+    padding: 12px 6px 6px 6px;
+  }
+  .calendario {
+    padding: 16px 2vw;
+  }
+}

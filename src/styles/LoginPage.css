@@ -1,0 +1,104 @@
+.login-page {
+    background-image: url('../media/fifthimg.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-page::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* azul oscuro translúcido */
+    z-index: 1;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    min-width: 320px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.login-title {
+    color: #002060;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.FormLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.FormLogin label {
+    color: #002060;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.login-input {
+    padding: 10px 12px;
+    border: 1.5px solid #b3c6e7;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f7faff;
+    color: #002060;
+    transition: border 0.2s;
+}
+
+.login-input:focus {
+    border: 1.5px solid #0057d9;
+    outline: none;
+    background: #fff;
+}
+
+.login-btn {
+    background: #0057d9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.login-btn:hover {
+    background: #003a99;
+}
+
+.login-error {
+    color: #d90000;
+    background: #ffeaea;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    text-align: center;
+}
