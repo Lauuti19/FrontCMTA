@@ -28,20 +28,20 @@ if ($conn->connect_error) {
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recibe datos en formato JSON
     $input = json_decode(file_get_contents('php://input'), true);
     $titulo = $input['titulo'] ?? '';
     $imagen = $input['imagen'] ?? '';
     $pie = $input['pie'] ?? '';
 
     if ($titulo && $imagen && $pie) {
-        $stmt = $conn->prepare("INSERT INTO noticias (titulo, imagen, pie) VALUES (?, ?, ?)");
+        // ACTUALIZA la noticia con ID 1 (o la más reciente según necesites)
+        $stmt = $conn->prepare("UPDATE noticias SET titulo = ?, imagen = ?, pie = ?, fecha = NOW() WHERE id = 17");
         $stmt->bind_param("sss", $titulo, $imagen, $pie);
         if ($stmt->execute()) {
-            echo json_encode(["success" => true, "message" => "Noticia agregada"]);
+            echo json_encode(["success" => true, "message" => "Noticia actualizada"]);
         } else {
             http_response_code(500);
-            echo json_encode(["success" => false, "message" => "Error al agregar noticia"]);
+            echo json_encode(["success" => false, "message" => "Error al actualizar noticia"]);
         }
         $stmt->close();
     } else {

@@ -22,13 +22,20 @@ const HomePage = () => {
         <div className="Seccion-Izquierda">
           <div className="Noticias">
             <h1>Ultimas Actualizaciones</h1>
-            <h2>{noticia ? noticia.titulo : "La pagina web volvio!"}</h2>
+            <h2>{noticia ? noticia.titulo : "Cargando Noticia..."}</h2>
             {noticia && noticia.imagen ? (
-              <img src={noticia.imagen} alt="" />
+              noticia.imagen.startsWith("data:video") ? (
+                <video controls autoPlay loop muted style={{ width: '100%' }}>
+                  <source src={noticia.imagen} type="video/mp4" />
+                  Tu navegador no soporta videos.
+                </video>
+              ) : (
+                <img src={noticia.imagen} alt="Imagen de la noticia" />
+              )
             ) : (
-              <img src={require('../news/web.jpg')} alt="" />
+              <img src={require('../news/web.jpg')} alt="Imagen por defecto" />
             )}
-            <p>{noticia ? noticia.pie : "Podremos seguir actualizandolos con noticias nuevamente!"}</p>
+            <p>{noticia ? noticia.pie : "Cargando..."}</p>
           </div>
         </div>
         <div className="Seccion-Derecha">
