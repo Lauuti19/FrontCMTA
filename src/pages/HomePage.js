@@ -25,7 +25,7 @@ const HomePage = () => {
             <h2>{noticia ? noticia.titulo : "Cargando Noticia..."}</h2>
             {noticia && noticia.imagen ? (
               noticia.imagen.startsWith("data:video") ? (
-                <video controls autoPlay loop muted style={{ width: '100%' }}>
+                <video controls autoPlay loop style={{ width: '100%' }}>
                   <source src={noticia.imagen} type="video/mp4" />
                   Tu navegador no soporta videos.
                 </video>
