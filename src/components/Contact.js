@@ -56,13 +56,14 @@ export default function ContactoInfo() {
             Puedes visitar nuestro Facebook mediante este enlace
             &nbsp;
             <a
-              href="https://www.facebook.com/share/16ZPLE2hfG/"
-              className="contacto-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              haciendo click aquí
-            </a>
+  href="https://www.facebook.com/emma.cayuqueo"
+  className="contacto-link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  haciendo click aquí
+</a>
+
             .
           </p>
         </div>
