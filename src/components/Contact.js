@@ -56,7 +56,7 @@ export default function ContactoInfo() {
             Puedes visitar nuestro Facebook mediante este enlace
             &nbsp;
             <a
-              href="https://www.facebook.com/comunidad.mapuches/?ref=embed_page"
+              href="https://www.facebook.com/share/16ZPLE2hfG/"
               className="contacto-link"
               target="_blank"
               rel="noopener noreferrer"
